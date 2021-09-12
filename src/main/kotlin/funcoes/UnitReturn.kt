@@ -1,0 +1,37 @@
+package funcoes
+
+// In Kotlin, 'Unit' replaces the use of Void as return in functions. However, Unit is an object
+// that as its own methods.
+fun imprimeMaior1(a: Int, b: Int) {
+    println(Math.max(a, b))
+}
+
+fun imprimeMaior2(a: Int, b: Int): Unit {
+    println(Math.max(a, b))
+}
+
+fun imprimeMaior3(a: Int, b: Int): Unit {
+    println(Math.max(a, b))
+    return
+}
+
+fun imprimeMaior4(a: Int, b: Int): Unit {
+    println(Math.max(a, b))
+    return Unit
+}
+
+fun imprimeMaior5(a: Int, b: Int) {
+    println(Math.max(a, b))
+    return Unit
+}
+
+fun main() {
+    imprimeMaior1(2, 1)
+    imprimeMaior2(2, 1)
+    imprimeMaior3(2, 1)
+    imprimeMaior4(2, 1)
+    imprimeMaior5(2, 1)
+
+    // Since 'Unit' is an object you can call methods related with it
+    imprimeMaior5(2, 1).run { 2 > 1 }.run { print("Resultado = $this")}
+}
