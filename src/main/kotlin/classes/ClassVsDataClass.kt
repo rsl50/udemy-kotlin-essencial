@@ -2,6 +2,13 @@ package classes
 
 class Geladeira(val marca: String, val litros: Int)
 data class Televisao(val marca: String, val polegadas: Int)
+/**
+ *  It is not unusual to create classes whose main purpose is to hold data. In such classes, some
+ *  standard functionality and some utility functions are often mechanically derivable from the
+ *  data. In Kotlin, these are called data classes and are marked with data:
+ *  data class User(val name: String, val age: Int)
+ *  Reference: https://kotlinlang.org/docs/data-classes.html
+ */
 
 fun main() {
     val g1 = Geladeira("Brastemp", 320)
