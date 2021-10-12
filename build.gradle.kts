@@ -14,6 +14,7 @@ repositories {
 dependencies {
     testImplementation(kotlin("test-junit"))
     implementation(kotlin("stdlib-jdk8"))
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.5.31")
 }
 
 tasks.test {
